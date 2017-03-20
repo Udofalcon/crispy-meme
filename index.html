@@ -7,11 +7,11 @@
 		<div id=title>TONY AND TREVOR'S SUPER MEGA ULTRA BIRTHDAY PARTY SHENANIGAN DELUXE COMBO BREAKER 6000</div>
 		<div id=timer></div>
 		<script>
+			var timer = document.getElementById('timer');
 			var previous = '';
 			var current = '';
 			
 			function doTheThing() {
-				var timer = document.getElementById('timer');
 				var seconds = 0;
 				var now = new Date(Date.now());
 				var then = new Date(2068, 0, 13, 1);
@@ -62,6 +62,8 @@
 				
 				return final;
 			}
+			
+			doTheThing();
 		</script>
 	</body>
 </html>
