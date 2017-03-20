@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Endless trash</title>
+	</head>
+	<body>
+		<div id=title>TONY AND TREVOR'S SUPER MEGA ULTRA BIRTHDAY PARTY SHENANIGAN DELUXE COMBO BREAKER 6000</div>
+		<div id=timer></div>
+		<script>
+			var previous = '';
+			var current = '';
+			
+			function doTheThing() {
+				var timer = document.getElementById('timer');
+				var seconds = 0;
+				var now = new Date(Date.now());
+				var then = new Date(2068, 0, 13, 1);
+				
+				now.setMilliseconds(0);
+				
+				while(now.getSeconds() !== then.getSeconds()) {
+					seconds++;
+					now.setSeconds(now.getSeconds() + 1);
+				}
+				
+				while(now.getMinutes() !== then.getMinutes()) {
+					seconds += 60;
+					now.setMinutes(now.getMinutes() + 1);
+				}
+				
+				while(now.getHours() !== then.getHours()) {
+					seconds += 60 * 60;
+					now.setHours(now.getHours() + 1);
+				}
+				
+				while(now.getTime() < then.getTime()) {
+					seconds += 60 * 60 * 24;
+					now.setDate(now.getDate() + 1);
+				}
+				
+				current = Beautify(seconds);
+				
+				if(current !== previous) {
+					previous = current;
+					
+					timer.innerText = current + " seconds.";
+				}
+			}
+			
+			function Beautify(num) {
+				var final = '';
+				
+				num = (num).toString().split('');
+				
+				for(var index = 0; index < num.length; index++) {
+					if((num.length - index) % 3 === 0 && index !== 0) {
+						final += ',';
+					}
+					
+					final += num[index];
+				}
+				
+				return final;
+			}
+		</script>
+	</body>
+</html>
