@@ -4,14 +4,143 @@
 		<title>Endless trash</title>
 		<style>
 			#main {
-				padding: 25vh 25vw;
+				padding-top: 25vh;
 			}
 			#timer {
 				margin-top: 88px;
 			}
-			h1 {
-				display: inline;
+			#menu, #timer {
+				text-align: center;
 			}
+			@keyframes rainbow {
+				0% {color: #ff0000;transform: translatey(0em);}
+				1% {color: #ff0f00;transform: translatey(0.015697629882328343em);}
+				2% {color: #ff1f00;transform: translatey(0.031333308391076065em);}
+				3% {color: #ff2e00;transform: translatey(0.04684532864643115em);}
+				4% {color: #ff3d00;transform: translatey(0.0621724717912137em);}
+				5% {color: #ff4d00;transform: translatey(0.07725424859373685em);}
+				6% {color: #ff5c00;transform: translatey(0.09203113817116948em);}
+				7% {color: #ff6b00;transform: translatey(0.10644482289126816em);}
+				8% {color: #ff7a00;transform: translatey(0.12043841852542883em);}
+				9% {color: #ff8a00;transform: translatey(0.13395669874474916em);}
+				10% {color: #ff9900;transform: translatey(0.14694631307311828em);}
+				11% {color: #ffa800;transform: translatey(0.1593559974371724em);}
+				12% {color: #ffb800;transform: translatey(0.17113677648217215em);}
+				13% {color: #ffc700;transform: translatey(0.1822421568553529em);}
+				14% {color: #ffd600;transform: translatey(0.1926283106939473em);}
+				15% {color: #ffe600;transform: translatey(0.20225424859373684em);}
+				16% {color: #fff500;transform: translatey(0.21108198137550377em);}
+				17% {color: #faff00;transform: translatey(0.21907667001096592em);}
+				18% {color: #ebff00;transform: translatey(0.2262067631165049em);}
+				19% {color: #dbff00;transform: translatey(0.23244412147206284em);}
+				20% {color: #ccff00;transform: translatey(0.23776412907378838em);}
+				21% {color: #bdff00;transform: translatey(0.24214579028215777em);}
+				22% {color: #adff00;transform: translatey(0.24557181268217215em);}
+				23% {color: #9eff00;transform: translatey(0.24802867532861944em);}
+				24% {color: #8fff00;transform: translatey(0.2495066821070679em);}
+				25% {color: #7fff00;transform: translatey(0.25em);}
+				26% {color: #70ff00;transform: translatey(0.2495066821070679em);}
+				27% {color: #61ff00;transform: translatey(0.24802867532861947em);}
+				28% {color: #52ff00;transform: translatey(0.24557181268217218em);}
+				29% {color: #42ff00;transform: translatey(0.24214579028215777em);}
+				30% {color: #33ff00;transform: translatey(0.2377641290737884em);}
+				31% {color: #24ff00;transform: translatey(0.23244412147206286em);}
+				32% {color: #14ff00;transform: translatey(0.22620676311650487em);}
+				33% {color: #05ff00;transform: translatey(0.21907667001096587em);}
+				34% {color: #00ff0a;transform: translatey(0.21108198137550374em);}
+				35% {color: #00ff19;transform: translatey(0.20225424859373686em);}
+				36% {color: #00ff29;transform: translatey(0.1926283106939473em);}
+				37% {color: #00ff38;transform: translatey(0.18224215685535286em);}
+				38% {color: #00ff47;transform: translatey(0.1711367764821722em);}
+				39% {color: #00ff57;transform: translatey(0.15935599743717246em);}
+				40% {color: #00ff66;transform: translatey(0.1469463130731183em);}
+				41% {color: #00ff75;transform: translatey(0.13395669874474925em);}
+				42% {color: #00ff85;transform: translatey(0.1204384185254288em);}
+				43% {color: #00ff94;transform: translatey(0.10644482289126822em);}
+				44% {color: #00ffa3;transform: translatey(0.09203113817116954em);}
+				45% {color: #00ffb3;transform: translatey(0.07725424859373688em);}
+				46% {color: #00ffc2;transform: translatey(0.06217247179121381em);}
+				47% {color: #00ffd1;transform: translatey(0.04684532864643114em);}
+				48% {color: #00ffe0;transform: translatey(0.031333308391076134em);}
+				49% {color: #00fff0;transform: translatey(0.015697629882328396em);}
+				50% {color: #00ffff;transform: translatey(3.061616997868383e-17em);}
+				51% {color: #00f0ff;transform: translatey(-0.015697629882328337em);}
+				52% {color: #00e0ff;transform: translatey(-0.03133330839107607em);}
+				53% {color: #00d1ff;transform: translatey(-0.04684532864643119em);}
+				54% {color: #00c2ff;transform: translatey(-0.06217247179121364em);}
+				55% {color: #00b2ff;transform: translatey(-0.07725424859373682em);}
+				56% {color: #00a3ff;transform: translatey(-0.09203113817116948em);}
+				57% {color: #0094ff;transform: translatey(-0.10644482289126807em);}
+				58% {color: #0085ff;transform: translatey(-0.12043841852542884em);}
+				59% {color: #0075ff;transform: translatey(-0.1339566987447491em);}
+				60% {color: #0066ff;transform: translatey(-0.14694631307311817em);}
+				61% {color: #0057ff;transform: translatey(-0.1593559974371724em);}
+				62% {color: #0047ff;transform: translatey(-0.1711367764821721em);}
+				63% {color: #0038ff;transform: translatey(-0.1822421568553529em);}
+				64% {color: #0029ff;transform: translatey(-0.19262831069394734em);}
+				65% {color: #0019ff;transform: translatey(-0.20225424859373684em);}
+				66% {color: #000aff;transform: translatey(-0.21108198137550382em);}
+				67% {color: #0500ff;transform: translatey(-0.2190766700109659em);}
+				68% {color: #1400ff;transform: translatey(-0.22620676311650495em);}
+				69% {color: #2400ff;transform: translatey(-0.23244412147206286em);}
+				70% {color: #3300ff;transform: translatey(-0.23776412907378838em);}
+				71% {color: #4200ff;transform: translatey(-0.2421457902821578em);}
+				72% {color: #5200ff;transform: translatey(-0.24557181268217218em);}
+				73% {color: #6100ff;transform: translatey(-0.24802867532861944em);}
+				74% {color: #7000ff;transform: translatey(-0.2495066821070679em);}
+				75% {color: #7f00ff;transform: translatey(-0.25em);}
+				76% {color: #8f00ff;transform: translatey(-0.2495066821070679em);}
+				77% {color: #9e00ff;transform: translatey(-0.24802867532861947em);}
+				78% {color: #ad00ff;transform: translatey(-0.24557181268217218em);}
+				79% {color: #bd00ff;transform: translatey(-0.24214579028215777em);}
+				80% {color: #cc00ff;transform: translatey(-0.2377641290737884em);}
+				81% {color: #db00ff;transform: translatey(-0.2324441214720629em);}
+				82% {color: #eb00ff;transform: translatey(-0.22620676311650498em);}
+				83% {color: #fa00ff;transform: translatey(-0.21907667001096584em);}
+				84% {color: #ff00f5;transform: translatey(-0.21108198137550374em);}
+				85% {color: #ff00e6;transform: translatey(-0.2022542485937369em);}
+				86% {color: #ff00d6;transform: translatey(-0.1926283106939474em);}
+				87% {color: #ff00c7;transform: translatey(-0.18224215685535303em);}
+				88% {color: #ff00b8;transform: translatey(-0.17113677648217224em);}
+				89% {color: #ff00a8;transform: translatey(-0.1593559974371724em);}
+				90% {color: #ff0099;transform: translatey(-0.14694631307311834em);}
+				91% {color: #ff008a;transform: translatey(-0.13395669874474928em);}
+				92% {color: #ff007a;transform: translatey(-0.12043841852542903em);}
+				93% {color: #ff006b;transform: translatey(-0.10644482289126825em);}
+				94% {color: #ff005c;transform: translatey(-0.09203113817116947em);}
+				95% {color: #ff004d;transform: translatey(-0.0772542485937369em);}
+				96% {color: #ff003d;transform: translatey(-0.06217247179121384em);}
+				97% {color: #ff002e;transform: translatey(-0.04684532864643117em);}
+				98% {color: #ff001f;transform: translatey(-0.03133330839107616em);}
+				99% {color: #ff000f;transform: translatey(-0.015697629882328316em);}
+				100% {color: #ff0000;transform: translatey(0em);}
+			}
+			h1 {
+				display: inline-block;
+				margin: 0 auto;
+				font-family: fantasy;
+				color: white;
+				text-shadow:
+					   0em -0.1em 0 #000,
+					   0em  0.1em 0 #000,
+					-0.1em    0em 0 #000,
+					 0.1em    0em 0 #000,
+					-0.1em -0.1em 0 #000,
+					-0.1em  0.1em 0 #000,
+					 0.1em -0.1em 0 #000,
+					 0.1em  0.1em 0 #000;
+				min-width: 0.75em;
+				animation-name: rainbow;
+				animation-duration: 1s;
+				animation-iteration-count: infinite;
+			}
+			h1:nth-child(8n+1) {animation-delay: 0.125s;}
+			h1:nth-child(8n+2) {animation-delay: 0.250s;}
+			h1:nth-child(8n+3) {animation-delay: 0.375s;}
+			h1:nth-child(8n+4) {animation-delay: 0.500s;}
+			h1:nth-child(8n+5) {animation-delay: 0.625s;}
+			h1:nth-child(8n+6) {animation-delay: 0.750s;}
+			h1:nth-child(8n+7) {animation-delay: 0.875s;}
 		</style>
 	</head>
 	<body>
