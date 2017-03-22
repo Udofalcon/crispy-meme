@@ -9,6 +9,8 @@
 			}
 			body {
 				margin: 0;
+				background-image: url('./Dance_Master.gif');
+				background-position: 50% 50%;
 			}
 			#main {
 				padding-top: 20vh;
@@ -168,14 +170,9 @@
 			</div>
 			<div id=timer></div>
 		</div>
-		<object type="application/x-shockwave-flash" data="https://thebest404pageever.com/swf/Dance_Master.swf" id="object_404">
-			<param name="allowScriptAccess" value="sameDomain" />
-			<param name="movie" value="https://thebest404pageever.com/swf/Dance_Master.swf" />
-			<param name="menu" value="false" />
-			<param name="quality" value="high" />
-			<param name="wmode" value="opaque" />
-			<embed src="https://thebest404pageever.com/swf/Dance_Master.swf" menu="false" quality="high" id="embed_404" allowscriptaccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
-		</object>
+		<audio hidden>
+			<source src="./Dance_Master.flac" type="audio/flac">
+		</audio>
 		<script>
 			var start = Date.now();
 			var timer = document.getElementById('timer');
